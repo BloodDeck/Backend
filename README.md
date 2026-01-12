@@ -16,6 +16,16 @@ python -m venv venv
 venv\Scripts\activate
 # On macOS/Linux:
 source venv/bin/activate
+```
 
+### 2. Installing Necessaries Dependencies 
 
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Running your server 
+
+
+```bash
+python manage.py runserver
