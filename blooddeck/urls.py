@@ -12,4 +12,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # Session Login (for DRF browsable API)
     path('api-auth/', include('rest_framework.urls')), 
+
+    #  User Auth Endpoint
+    path('account/', include('account.urls'))
 ]
