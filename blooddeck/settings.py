@@ -34,7 +34,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication', # For browsable API & Admin
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.AllowAny', # I changed this. Individual permissions can be handled via views
     ),
 }
 
@@ -101,7 +101,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'account.User' #Custom User to be used across project
+AUTH_USER_MODEL = 'account.User' # Custom User to be used across project
 
 
 

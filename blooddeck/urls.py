@@ -14,5 +14,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')), 
 
     #  User Auth Endpoint
-    path('account/', include('account.urls'))
+    path('', include('account.urls'))
 ]
