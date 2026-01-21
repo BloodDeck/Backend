@@ -14,7 +14,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')), 
 
     # --- Admin Dashboard Routes ---
-    path('api/admin/dashboard/', views.SuperAdminDashboard.as_view(), name='dashboard_stats'),
+    path('api/admin/dashboard/', views.SuperAdminDashboardView.as_view(), name='dashboard_stats'),
     path('api/admin/users/', views.UserListView.as_view(), name='user_list'),
     
     # --- Applications (Blood Banks & Hospitals) ---
