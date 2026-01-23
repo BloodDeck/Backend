@@ -32,6 +32,8 @@ urlpatterns = [
     path('api/donor/dashboard/', views.DashboardStatsView.as_view()),
     path('api/donor/history/', views.DonorHistoryView.as_view()),
 
+    path('api/dashboard-redirect/', views.DashboardRedirectView.as_view(), name='dashboard-redirect'),
+    
     # Blood Bank Routes (/bloodbank/...)
     path('api/bloodbank/dashboard/', views.DashboardStatsView.as_view()),
     path('api/bloodbank/stock/', views.BloodBankStockView.as_view()),

@@ -51,6 +51,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blooddeck.urls'
 
+LOGIN_REDIRECT_URL = '/api/dashboard-redirect/'
+
+LOGOUT_REDIRECT_URL = '/api/auth/login/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,6 +77,20 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+# blooddeck/settings.py
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'BloodDeck API',
+    'DESCRIPTION': 'Backend API for Blood Bank, Hospital, and Donor Management System.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # This groups your tags in the UI
+    'COMPONENT_SPLIT_PATCH': True,
+    'COMPONENT_SPLIT_REQUEST': True,
+    # Add your JWT security requirement so 'Authorize' works in Swagger
+    'SECURITY': [{'jwt': []}],
 }
 
 AUTH_USER_MODEL = 'api.User'
